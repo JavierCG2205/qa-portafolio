@@ -1,0 +1,16 @@
+lineas = [
+    "INFO: Servidor iniciado",
+    "ERROR: No se pudo conectar",
+    "INFO: Usuario entró",
+    "ERROR: Archivo no encontrado",
+]
+
+def contar_errores(lineas):
+    total = 0
+    for linea in lineas:
+        if linea.startswith("ERROR"):
+            total += 1
+    return total
+
+if __name__ == "__main__":
+    print(contar_errores(lineas))  # Salida: 2
